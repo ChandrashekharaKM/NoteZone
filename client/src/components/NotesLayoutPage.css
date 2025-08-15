@@ -1,0 +1,258 @@
+.notes-layout-container {
+    height: calc(100vh - 70px);
+    background: #fff;
+}
+
+/* --- Left Panel --- */
+.left-panel {
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+.left-panel-header {
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.left-panel-header h3 {
+    margin: 0;
+    color: #333;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.back-to-dashboard-btn {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.new-note-btn-small {
+    background-color: #198754;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.notes-list-condensed {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.note-list-item {
+    padding: 1rem;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.note-list-item:hover {
+    background-color: #f7f7f7;
+}
+
+.note-list-item.active {
+    background-color: #e9f5ff;
+    font-weight: bold;
+}
+
+.video-icon-small {
+    color: #c4302b;
+    flex-shrink: 0;
+}
+
+/* --- Right Panel --- */
+.right-panel {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.note-detail-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.note-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.right-panel h2 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* --- Welcome Placeholder --- */
+.placeholder-welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(45deg, #e9f5ff, #ffffff);
+    text-align: center;
+    padding: 2rem;
+}
+
+.welcome-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0d6efd;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-content p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* --- TABS --- */
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 2rem;
+}
+
+.tab-button {
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #888;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+}
+
+.tab-button.active {
+    color: #0d6efd;
+    border-bottom: 3px solid #0d6efd;
+}
+
+/* --- VIDEO & CONTENT --- */
+.tab-content {
+    flex-grow: 1;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.note-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* --- COMPILER --- */
+.compiler-container {
+    width: 100%;
+    height: 600px;
+}
+
+.compiler-iframe {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* --- Note Navigation --- */
+.note-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+.nav-button {
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.nav-button:hover:not(:disabled) {
+    background-color: #0b5ed7;
+    transform: translateY(-2px);
+}
+
+.nav-button:disabled {
+    background-color: #a0a0a0;
+    cursor: not-allowed;
+}
+
+/* --- ADMIN ACTION BUTTONS --- */
+.admin-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.action-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.edit-btn {
+    background-color: #0d6efd;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}

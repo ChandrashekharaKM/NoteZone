@@ -1,0 +1,77 @@
+/* Base styles for all headers */
+.header-user, .header-admin {
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* User-specific header color */
+.header-user {
+    background-color: #0d6efd; /* Blue */
+}
+
+/* Admin-specific header color */
+.header-admin {
+    background-color: #dc3545; /* Red */
+}
+
+.header-user h1, .header-admin h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Profile Dropdown styles */
+.profile-menu {
+    position: relative;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.profile-menu:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* ADD THIS NEW RULE to style the logout button like a link */
+.logout-button {
+    background: none;
+    border: none;
+    padding: 12px 16px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-family: inherit; /* Ensure it uses the same font */
+}
+
+.logout-button:hover {
+    background-color: #f1f1f1;
+}

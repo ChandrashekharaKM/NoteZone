@@ -1,0 +1,20 @@
+# Dependencies
+/node_modules
+/client/node_modules
+/server/node_modules
+
+# Environment Variables
+# This is critical to keep your secrets safe!
+/server/.env
+
+# Production build folder
+/client/build
+
+# Logs
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
